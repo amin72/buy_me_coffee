@@ -140,19 +140,10 @@ media/*
 # exception to the rule
 !media/.gitkeep 
 
-# migrations
-api/migrations/
-
 # sqlite files
 *.sqlite
 
 notes
 todo
-
-static
-!lesson/static
-!quiz/static
-
-prompts/*
 
 logs/*
