@@ -10,4 +10,7 @@ urlpatterns = [
 
     # user_profile
     path("auth/", include('user_profile.urls')),
+
+    # creator
+    path("creator/", include('creator.urls')),
 ]
