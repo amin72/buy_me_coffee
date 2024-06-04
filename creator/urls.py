@@ -19,4 +19,11 @@ urlpatterns = [
         views.creator,
         name='creator'
     ),
+
+    # edit creator
+    path(
+        'creator/edit/',
+        views.edit_creator,
+        name='creator_edit'
+    ),
 ]
