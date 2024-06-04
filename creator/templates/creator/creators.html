@@ -24,7 +24,7 @@
                         {{ creator.description }}
                     </p>
 
-                    <a href="#" class="py-4 px-6 inline-block text-xl text-white bg-sky-800 rounded-xl">Read more</a>
+                    <a href="{% url 'creator:creator' creator.pk %}" class="py-4 px-6 inline-block text-xl text-white bg-sky-800 rounded-xl">Read more</a>
                 </div>
             </div>
         {% endfor %}

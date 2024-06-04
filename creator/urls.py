@@ -12,4 +12,11 @@ urlpatterns = [
         views.creators,
         name='creators'
     ),
+
+    # creator
+    path(
+        'creator/<int:pk>/',
+        views.creator,
+        name='creator'
+    ),
 ]
