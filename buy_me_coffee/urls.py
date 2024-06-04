@@ -7,4 +7,7 @@ urlpatterns = [
 
     # core
     path("", include('core.urls')),
+
+    # user_profile
+    path("auth/", include('user_profile.urls')),
 ]
