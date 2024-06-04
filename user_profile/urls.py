@@ -13,4 +13,11 @@ urlpatterns = [
         auth_views.LoginView.as_view(template_name='user_profile/login.html'),
         name='login'
     ),
+
+    # signup
+    path(
+        'signup/',
+        views.signup,
+        name='signup'
+    ),
 ]
