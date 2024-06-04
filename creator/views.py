@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 
 from .models import Creator
 from .forms import CreatorForm
@@ -48,4 +49,20 @@ def edit_creator(request):
 
     return render(request, 'creator/edit.html', {
         'form': form
+    })
+
+
+@login_required
+def creator_page(request):
+    creator = request.user.creator
+    supports = creator.supports.filter(is_paid=True)
+    total = 0
+
+    for support in supports:
+        total += support.amount
+
+    return render(request, 'creator/creator_page.html', {
+        'creator': creator,
+        'supports': supports,
+        'total': total
     })

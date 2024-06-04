@@ -6,6 +6,13 @@ from . import views
 app_name = 'creator'
 
 urlpatterns = [
+    # creator page
+    path(
+        'page/',
+        views.creator_page,
+        name='creator_page'
+    ),
+
     # creators
     path(
         'creators/',
