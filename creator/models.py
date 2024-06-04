@@ -10,7 +10,7 @@ class Creator(models.Model):
     Model to represent creators.
     """
 
-    user = models.ForeignKey(User, related_name='creators', on_delete=models.CASCADE)
+    user = models.OneToOneField(User, related_name='creator', on_delete=models.CASCADE)
 
     title = models.CharField(max_length=255)
     description = models.TextField(null=True, blank=True)
